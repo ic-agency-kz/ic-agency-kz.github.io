@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Концепт для Dara dental clinic</title>
+<meta name="robots" content="noindex,nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@600;800&family=Rubik:wght@400;500;600&display=swap">
+<style>
+/* layout: header → hero → special block → services → booking → contacts; sticky call bar on phones */
+:root{--bg:#f7f5ff;--ink:#16133a;--muted:#55516f;--accent:#ff4f5e;--accent-ink:#ffffff;--soft:#ebe5ff;--hero:#16133a;--hero-ink:#f7f5ff;--line:#dcd5f5;
+--disp:'Montserrat Alternates','Lora',Georgia,serif;--body:'Rubik','Inter',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;color-scheme:light}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 var(--body);-webkit-font-smoothing:antialiased}
+a{color:inherit}
+.wrap{max-width:1080px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.tnum{font-variant-numeric:tabular-nums}
+h1,h2,h3{font-family:var(--disp);line-height:1.12;margin:0;text-wrap:balance;font-weight:700}
+h1{font-size:clamp(2rem,5.2vw,3.6rem);letter-spacing:-.01em}
+h2{font-size:clamp(1.5rem,3.4vw,2.3rem)}
+h3{font-size:1.15rem}
+.eyebrow{text-transform:uppercase;letter-spacing:.12em;font-size:.75rem;font-weight:600;color:var(--accent);margin:0 0 .6rem}
+.ribbon{background:var(--ink);color:var(--bg);font-size:.8rem;text-align:center;padding-block:.45rem;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))} .ribbon.pitch{background:#ffd84d;color:#1a1a1a;font-size:.9rem;font-weight:600;padding-block:.7rem}
+header.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+header.top .wrap{display:flex;align-items:center;gap:1rem;padding-block:.8rem}
+.logo{font-family:var(--disp);font-weight:700;font-size:1.2rem;text-decoration:none;margin-right:auto}
+nav.links{display:flex;gap:1.2rem;font-size:.92rem} nav.links a{text-decoration:none;color:var(--muted)} nav.links a:hover{color:var(--ink)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;border-radius:999px;padding:.8rem 1.3rem;font-weight:600;text-decoration:none;border:0;cursor:pointer;font:600 1rem var(--body)}
+.btn.primary{background:var(--accent);color:var(--accent-ink)} .btn.ghost{background:transparent;border:1.5px solid currentColor}
+.btn:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,a:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+.lang{background:none;border:1px solid var(--line);border-radius:999px;padding:.3rem .7rem;font:600 .8rem var(--body);cursor:pointer;color:var(--ink)}
+.hero{background:var(--hero);color:var(--hero-ink)} .hero .wrap{padding-block:clamp(3rem,8vw,6rem);display:grid;gap:1.4rem}
+.hero-grid{grid-template-columns:1.6fr 1fr;align-items:center} .hero-main{display:grid;gap:1.4rem;min-width:0}
+.hero-card{border:1px solid color-mix(in srgb,var(--hero-ink) 22%,transparent);border-radius:24px;padding:2rem;display:grid;gap:.6rem} .hero-card b{font:700 clamp(2.2rem,5vw,3.6rem)/1 var(--disp);color:var(--accent)} .hero-card span{opacity:.85}
+.hero .lead{font-size:clamp(1.05rem,1.6vw,1.2rem);max-width:58ch;opacity:.88;margin:0}
+.hero .ctas{display:flex;flex-wrap:wrap;gap:.8rem}
+.facts{display:flex;flex-wrap:wrap;gap:.6rem 1.6rem;font-size:.92rem;opacity:.9;margin-top:.4rem} .facts b{font-weight:600}
+.band{padding-block:clamp(2.8rem,7vw,5rem);border-bottom:1px solid var(--line)}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:clamp(1.5rem,4vw,3.5rem);align-items:start} .two>*{min-width:0}
+.lead-s{color:var(--muted);max-width:52ch}
+.card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:1.5rem;display:grid;gap:.8rem}
+.tags{display:flex;flex-wrap:wrap;gap:.5rem} .tags span{background:var(--soft);border-radius:999px;padding:.35rem .8rem;font-size:.88rem}
+.steps{margin:0;padding-left:1.2rem;display:grid;gap:.4rem} .phone-line{margin:0;color:var(--muted)}
+.price{list-style:none;margin:1rem 0 0;padding:0;display:grid} .price li{display:flex;justify-content:space-between;gap:1rem;padding:.85rem 0;border-bottom:1px dashed var(--line)} .price b{white-space:nowrap}
+.tabs{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1.2rem} .tab{border:1.5px solid var(--line);background:#fff;border-radius:999px;padding:.5rem 1rem;font:500 .95rem var(--body);cursor:pointer;color:var(--ink)} .tab.on{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.note{font-size:.85rem;color:var(--muted);margin-top:1rem}
+.calc label{font-size:.9rem;font-weight:600} .calc select,.calc input[type=range]{width:100%} .calc .row{display:flex;gap:1rem;align-items:center} .calc output{font:700 1.4rem var(--disp);min-width:2ch}
+select,input[type=text],input[type=tel]{font:inherit;padding:.7rem .8rem;border:1.5px solid var(--line);border-radius:12px;background:#fff;color:var(--ink);width:100%}
+.result{display:grid;grid-template-columns:1fr 1fr;gap:1rem;background:var(--soft);border-radius:14px;padding:1rem} .result span{display:block;font-size:.8rem;color:var(--muted)} .result b{font:700 1.35rem var(--disp)}
+.compare{position:relative;aspect-ratio:4/3;max-width:100%;border-radius:18px;overflow:hidden;border:1px solid var(--line)}
+.cmp-before,.cmp-after{position:absolute;inset:0;display:flex;align-items:flex-end;padding:1rem}
+.cmp-before{background:repeating-linear-gradient(90deg,#d9cfc3 0 22px,#cfc3b4 22px 24px)}
+.cmp-after{background:repeating-linear-gradient(90deg,#fbfbfd 0 22px,#eef0f4 22px 24px);clip-path:inset(0 0 0 50%)}
+.cmp-before span,.cmp-after span{background:var(--ink);color:var(--bg);border-radius:999px;padding:.2rem .7rem;font-size:.8rem} .cmp-after{justify-content:flex-end}
+.compare input{position:absolute;inset:auto 0 50% 0;width:100%;opacity:.0001;height:100%;transform:translateY(50%);cursor:ew-resize}
+.reels{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:1.4rem}
+.reel{aspect-ratio:9/14;max-width:100%;border-radius:18px;background:linear-gradient(160deg,var(--ink),color-mix(in srgb,var(--accent) 55%,var(--ink)));color:#fff;text-decoration:none;display:flex;flex-direction:column;justify-content:flex-end;padding:1rem;position:relative}
+.reel .play{position:absolute;top:50%;left:50%;width:56px;height:56px;margin:-28px 0 0 -28px;border-radius:50%;background:rgba(255,255,255,.18)} .reel .play::after{content:"";position:absolute;left:22px;top:17px;border:11px solid transparent;border-left:17px solid #fff;border-right:0}
+.reel small{opacity:.75}
+.promo{margin-top:1.4rem;display:flex;flex-wrap:wrap;gap:.4rem 1rem;align-items:center;background:var(--accent);color:var(--accent-ink);border-radius:16px;padding:1rem 1.3rem}
+.svc{list-style:none;padding:0;margin:1.4rem 0 0;display:grid;grid-template-columns:1fr 1fr;gap:0 2.5rem} .svc li{display:flex;justify-content:space-between;gap:1rem;padding:.9rem 0;border-bottom:1px solid var(--line)} .svc b{white-space:nowrap;color:var(--accent)}
+form.book{display:grid;grid-template-columns:1fr 1fr;gap:.9rem} form.book .full{grid-column:1/-1} form.book label{display:grid;gap:.35rem;font-size:.9rem;font-weight:600}
+.out{background:var(--soft);border-radius:14px;padding:1rem;font-size:.92rem;white-space:pre-line}
+.contacts{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem} .contacts>div{min-width:0} .contacts h3{font-size:1rem;margin-bottom:.3rem} .contacts p{margin:0;color:var(--muted)}
+.soc{display:flex;gap:1rem;flex-wrap:wrap}
+footer{padding-block:2rem 6rem;color:var(--muted);font-size:.85rem}
+.callbar{display:none}
+@media (max-width:760px){
+ nav.links,.hide-m{display:none} .hero-grid{grid-template-columns:1fr} .two,.svc,form.book,.contacts{grid-template-columns:1fr} .reels{grid-template-columns:1fr 1fr} .reels .reel:nth-child(3){display:none}
+ .callbar{display:grid;grid-template-columns:1fr 1fr;gap:.6rem;position:fixed;left:0;right:0;bottom:0;z-index:30;background:var(--bg);border-top:1px solid var(--line);padding-top:.6rem;padding-bottom:calc(.6rem + env(safe-area-inset-bottom,0px));padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+}
+@media (prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
+html{scroll-behavior:smooth}
+</style></head><body>
+<div class="ribbon pitch">Концепт IC Agency для Dara dental clinic. Это не официальный сайт клиники: телефоны и запись отключены, цены примерные</div>
+<header class="top"><div class="wrap">
+  <a class="logo" href="#">Dara</a>
+  <nav class="links"><a href="#services">Услуги</a><a href="#book">Запись</a><a href="#contacts">Контакты</a></nav>
+  <span class="tnum hide-m">+7 7XX XXX XX XX</span>
+  <a class="btn primary hide-m" href="#book" target="_blank" rel="noopener">WhatsApp</a>
+</div></header>
+<section class="hero"><div class="wrap hero-grid"><div class="hero-main">
+  <p class="eyebrow" data-en="">Видели нас в TikTok?</p>
+  <h1>Запишитесь к нам за 30 секунд</h1>
+  <p class="lead">Тот самый Dara dental clinic на Толе би, 147. Выберите услугу и время, остальное уточним в WhatsApp.</p>
+  <div class="ctas"><a class="btn primary" href="#book">Записаться в WhatsApp</a><a class="btn ghost" href="#services">Услуги и цены</a></div>
+  <div class="facts"><span><b>★ 5.0</b> · 320 отзывов в 2ГИС</span><span>Пн–Сб 09:00–20:00, Вс 10:00–20:00</span><span>ул. Толе би, 147</span></div>
+</div><div class="hero-card"><b>30 сек</b><span>Столько занимает запись через сайт</span></div></div></section>
+
+<section class="band" id="reels"><div class="wrap">
+  <p class="eyebrow">Наш TikTok</p><h2>Смотрели? Теперь к нам на приём</h2>
+  <div class="reels"><a class="reel" href="https://www.tiktok.com/@dara_dental_clinic" target="_blank" rel="noopener"><span class="play" aria-hidden="true"></span><b>Как проходит чистка</b><small>видео из вашего TikTok</small></a><a class="reel" href="https://www.tiktok.com/@dara_dental_clinic" target="_blank" rel="noopener"><span class="play" aria-hidden="true"></span><b>До и после отбеливания</b><small>видео из вашего TikTok</small></a><a class="reel" href="https://www.tiktok.com/@dara_dental_clinic" target="_blank" rel="noopener"><span class="play" aria-hidden="true"></span><b>Отзыв пациента</b><small>видео из вашего TikTok</small></a></div>
+  <div class="promo"><b>−10% на первый визит</b><span>Скажите администратору «Я из TikTok»</span></div>
+</div></section>
+<section class="band" id="services"><div class="wrap">
+  <p class="eyebrow">Услуги</p><h2>Основные услуги и цены</h2>
+  <ul class="svc"><li><span>Консультация</span><b class="tnum">бесплатно*</b></li><li><span>Лечение кариеса</span><b class="tnum">от 15 000 ₸</b></li><li><span>Профгигиена</span><b class="tnum">от 15 000 ₸</b></li><li><span>Отбеливание</span><b class="tnum">от 60 000 ₸</b></li><li><span>Элайнеры и брекеты</span><b class="tnum">от 300 000 ₸</b></li><li><span>Детская стоматология</span><b class="tnum">от 10 000 ₸</b></li></ul>
+  <p class="note">Цены в демо-версии примерные. Перед запуском подставим ваш прайс.</p>
+</div></section>
+<section class="band" id="book"><div class="wrap two">
+  <div><p class="eyebrow">Онлайн-запись</p><h2>Запишитесь, не дожидаясь ответа в директе</h2>
+  <p class="lead-s">Заполните форму, и откроется WhatsApp с готовым сообщением для администратора. Пациенту не нужно ничего печатать.</p></div>
+  <form class="card book" id="bookForm" novalidate>
+    <label>Имя<input type="text" id="fName" autocomplete="name" placeholder="Айгерим" required></label>
+    <label>Телефон<input type="tel" id="fPhone" autocomplete="tel" placeholder="+7 7__ ___ __ __"></label>
+    <label class="full">Услуга<select id="fSvc"><option>Консультация</option><option>Лечение кариеса</option><option>Профгигиена</option><option>Отбеливание</option><option>Элайнеры и брекеты</option><option>Детская стоматология</option></select></label>
+    <label class="full">Когда удобно<select id="fWhen"><option>Сегодня</option><option>Завтра</option><option>На этой неделе</option><option>Обсудим в чате</option></select></label>
+    <button class="btn primary full" type="submit">Показать сообщение</button>
+    <div class="out full" id="fOut" hidden></div>
+  </form>
+</div></section>
+<section class="band" id="contacts"><div class="wrap">
+  <p class="eyebrow">Контакты</p>
+  <div class="contacts">
+    <div><h3>Адрес</h3><p>ул. Толе би, 147<br>Алмалинский район, Алматы</p></div>
+    <div><h3>Часы работы</h3><p>Пн–Сб 09:00–20:00, Вс 10:00–20:00</p></div>
+    <div><h3>Телефон</h3><p class="tnum">+7 7XX XXX XX XX</p><div class="soc"><a href="https://2gis.com/firm/70000001067110971" target="_blank" rel="noopener">2ГИС</a><a href="https://instagram.com/dara_dental_clinic" target="_blank" rel="noopener">Instagram</a><a href="https://www.tiktok.com/@dara_dental_clinic" target="_blank" rel="noopener">TikTok</a></div></div>
+  </div>
+</div></section>
+<footer><div class="wrap">Концепт подготовлен IC Agency как предложение для Dara dental clinic. Это не официальный сайт клиники.</div></footer>
+<div class="callbar"><a class="btn ghost" href="#contacts">Контакты</a><a class="btn primary" href="#book">Записаться</a></div>
+<script>
+(function(){
+var WA="";
+var f=document.getElementById('bookForm'),out=document.getElementById('fOut');
+f.addEventListener('submit',function(e){e.preventDefault();
+ var n=document.getElementById('fName').value.trim()||'—',p=document.getElementById('fPhone').value.trim()||'—';
+ var msg='Здравствуйте! Хочу записаться.\nИмя: '+n+'\nТелефон: '+p+'\nУслуга: '+document.getElementById('fSvc').value+'\nКогда удобно: '+document.getElementById('fWhen').value;
+ out.hidden=false;out.textContent=msg;
+ if(WA){var a=document.createElement('a');a.href='https://wa.me/'+WA+'?text='+encodeURIComponent(msg);a.target='_blank';a.rel='noopener';document.body.appendChild(a);a.click();a.remove();}
+});
+var tabs=document.querySelectorAll('.tab');tabs.forEach(function(b){b.addEventListener('click',function(){tabs.forEach(function(x){x.classList.remove('on');x.setAttribute('aria-pressed','false');document.getElementById(x.dataset.tab).hidden=true;});b.classList.add('on');b.setAttribute('aria-pressed','true');document.getElementById(b.dataset.tab).hidden=false;});});
+var clk=document.getElementById('clock');if(clk){var tick=function(){try{clk.textContent=new Intl.DateTimeFormat('ru-RU',{hour:'2-digit',minute:'2-digit',timeZone:'Asia/Almaty'}).format(new Date());}catch(e){var d=new Date();clk.textContent=('0'+d.getHours()).slice(-2)+':'+('0'+d.getMinutes()).slice(-2);}};tick();setInterval(tick,20000);}
+var ct=document.getElementById('cTeeth');if(ct){var fmt=function(v){return Math.round(v).toLocaleString('ru-RU').replace(/,/g,' ')+' ₸'};var calc=function(){var n=+ct.value,s=+document.getElementById('cSys').value,m=+document.getElementById('cMonths').value;document.getElementById('cTeethOut').textContent=n;var tot=n*s;document.getElementById('cTotal').textContent=fmt(tot);document.getElementById('cMonthly').textContent=m?fmt(tot/m):'—';};['cTeeth','cSys','cMonths'].forEach(function(id){document.getElementById(id).addEventListener('input',calc);});calc();}
+var cr=document.getElementById('cmpRange');if(cr){var ca=document.getElementById('cmpAfter');cr.addEventListener('input',function(){ca.style.clipPath='inset(0 0 0 '+cr.value+'%)';});}
+var lb=document.getElementById('langBtn');if(lb){var en=false;var els=[].slice.call(document.querySelectorAll('[data-en]')).filter(function(x){return x.dataset.en});els.forEach(function(x){x.dataset.ru=x.textContent;});lb.addEventListener('click',function(){en=!en;els.forEach(function(x){x.textContent=en?x.dataset.en:x.dataset.ru;});lb.textContent=en?'RU':'EN';});}
+})();
+</script></body></html>
